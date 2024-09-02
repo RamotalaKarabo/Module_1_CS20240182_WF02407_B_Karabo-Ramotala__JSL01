@@ -1,12 +1,33 @@
+let inputEl = document.getElementById('petInput');
+let pattern = /^pet_20\d{2}\w+/; 
+
 function validateSyntax() {
-    let input = document.getElementById('petInput').value;
-    // Validation logic goes here
-    let result = ''; // Placeholder for validation result
 
-    // TODO: Write your validation logic here
-        // Check if input starts with 'pet_' and followed by alphanumeric characters
-
-            document.getElementById('result').innerText = result;
+    console.log(inputEl.value);
+    let result = '';
+    result = checkInput();    
+    document.getElementById('result').innerText = result;
 }
 
 
+
+
+function checkInput(){
+    let output = "";
+
+    console.log(typeof(inputEl.value));
+
+    if(typeof(inputEl.value) == "string"){
+       if(pattern.test(inputEl.value)){
+            output = "Valid Syntax" + U+1F7E2;
+        }
+        else{
+            output = "Invalid Syntax" + U+1F534;
+        }
+    }else{
+        output = "Invalid Syntax";
+    }
+
+    console.log(output);
+    return output; 
+}
