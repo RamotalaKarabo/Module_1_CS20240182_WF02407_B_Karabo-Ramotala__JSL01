@@ -19,10 +19,10 @@ function checkInput(){
 
     if(typeof(inputEl.value) == "string"){
        if(pattern.test(inputEl.value)){
-            output = "Valid Syntax" + U+1F7E2;
+            output = "Valid Syntax" + " 🟢";
         }
         else{
-            output = "Invalid Syntax" + U+1F534;
+            output = "Invalid Syntax" + " 🔴";
         }
     }else{
         output = "Invalid Syntax";
