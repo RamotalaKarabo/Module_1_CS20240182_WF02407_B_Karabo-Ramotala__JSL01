@@ -25,7 +25,7 @@ function checkInput(){
             output = "Invalid Syntax" + " 🔴";
         }
     }else{
-        output = "Invalid Syntax";
+        output = "Invalid Syntax" + " 🔴";
     }
 
     console.log(output);
